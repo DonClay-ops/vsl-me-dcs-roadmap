@@ -625,6 +625,94 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
 .ds-cp .a{font-size:12px;background:var(--panel2);border-radius:10px;padding:8px 10px;line-height:1.45;min-height:58px}
 .ds-cp .a .cite{margin-top:5px}
 
+/* ===== Phase 1 scope & timeline ===== */
+.scope{display:grid;grid-template-columns:1.75fr 1fr;gap:20px;margin-top:30px}
+.scope .card{padding:24px 26px}
+.scope .hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.scope .hd .tag{font-size:13px}
+.scope .hd .n{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted)}
+.scope .in2{display:grid;grid-template-columns:1fr 1fr;column-gap:30px}
+.scope ul.clean li{font-size:15px;margin:8px 0;line-height:1.4;padding-left:20px}
+.scope ul.clean li::before{top:7px}
+.scope .out ul.clean li{font-size:15px}
+.phead .pmeta.one{flex:none;flex-wrap:nowrap;max-width:none}
+.scope .out ul.clean li::before{background:none;content:"✕";width:auto;height:auto;top:1px;font-size:13px;font-weight:800;color:#ff7a8a}
+.scope .out{border-color:rgba(255,122,138,.28);background:linear-gradient(180deg,rgba(255,122,138,.06),var(--bg2))}
+.p1tl{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:30px}
+.p1tl ul.clean li{font-size:16px;margin:13px 0;line-height:1.42}
+.wk{display:grid;grid-template-columns:34px 300px repeat(9,1fr);font-size:15px}
+.wk>div{display:flex;align-items:center;min-height:56px;border-top:1px solid var(--line)}
+.wk .h{min-height:34px;border-top:none;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.06em;justify-content:center}
+.wk .h.ph{justify-content:flex-start}
+.wk .no{color:var(--dim);font-weight:700;justify-content:center}
+.wk .nm{padding-right:10px;line-height:1.3;color:#d8d9dc}
+.wk .c{justify-content:center;border-left:1px solid rgba(255,255,255,.04)}
+.wk .c.on i{display:grid;place-items:center;width:calc(100% - 6px);height:30px;border-radius:7px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.wk .c.on i::after{content:"";width:9px;height:9px;border-radius:50%;background:#fff}
+.slide.active .wk .c.on i{transform:scaleX(1);transition-delay:var(--d)}
+.wk .gl{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.08em}
+
+/* ===== Adoption approach (phases 2-5) ===== */
+.ad{--pc:var(--p2)}
+.ad .sw{transition:opacity .22s ease,transform .22s ease}
+.ad .sw.out{opacity:0;transform:translateY(6px)}
+.ad-sel{display:flex;gap:8px;align-items:stretch}
+.ad-sel button{position:relative;overflow:hidden;font-family:inherit;text-align:left;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 14px 11px;color:var(--muted);min-width:148px;transition:all .3s}
+.ad-sel button b{display:block;font-size:11px;letter-spacing:.14em;font-weight:800;color:var(--c)}
+.ad-sel button span{display:block;font-size:14px;font-weight:700;margin-top:2px;color:var(--text)}
+.ad-sel button i{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--c)}
+.ad-sel button.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--panel));box-shadow:0 0 0 1px var(--c),0 10px 30px color-mix(in srgb,var(--c) 25%,transparent)}
+.ad-sel button.on i{width:100%}
+.ad-sel button.on i.run{animation:adprog var(--dur,8s) linear forwards}
+@keyframes adprog{from{width:0}to{width:100%}}
+.ad-sel .pp{min-width:0;width:44px;display:grid;place-items:center;font-size:15px;color:var(--text)}
+.ad-grid{display:grid;grid-template-columns:300px 1fr 350px;gap:18px;margin-top:20px;height:345px}
+.ad .card{padding:16px 18px}
+.ad-gate .g{display:grid;grid-template-columns:30px 1fr;gap:10px;margin-top:12px}
+.ad-gate .g .ck{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;color:#111;background:var(--pc);transform:scale(0);transition:transform .45s cubic-bezier(.3,1.6,.5,1),background .3s}
+.ad-gate .g.on .ck{transform:scale(1)}
+.ad-gate .g h4{font-size:14px;font-weight:800}
+.ad-gate .g p{font-size:12.5px;color:#cfd0d4;line-height:1.42;margin-top:3px}
+.ad-ws{display:grid;grid-template-rows:1fr 30px 1fr;position:relative}
+.ad-ws .card{position:relative;padding:14px 18px 12px 18px}
+.ad-ws .card h4{font-size:17px;font-weight:800;display:flex;align-items:center;gap:10px}
+.ad-ws .card h4 small{font-size:12px;font-weight:600;color:var(--muted);margin-left:auto}
+.ad-ws ul.clean li{font-size:14.5px;margin:8px 0;line-height:1.38}
+.ad-ws .ue{border-left:4px solid var(--cyan);--accent:var(--cyan)}
+.ad-ws .tr{border-left:4px solid var(--orange);--accent:var(--orange)}
+.ad-ws .ue h4{color:var(--cyan)} .ad-ws .tr h4{color:var(--orange)}
+.ad-link{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11.5px;color:var(--muted);font-weight:600}
+.ad-link span{border:1px dashed var(--line);border-radius:8px;padding:4px 12px;background:var(--bg2)}
+.ad-link em{font-style:normal;color:var(--pc);font-size:16px;animation:adbob 1.6s ease-in-out infinite}
+@keyframes adbob{50%{transform:translateY(-3px)}}
+.ad-flow{position:absolute;right:-18px;width:18px;height:2px;background:var(--line);overflow:hidden}
+.ad-flow::after{content:"";position:absolute;top:0;left:-8px;width:8px;height:2px;background:#fff;animation:adflow 1.2s linear infinite}
+@keyframes adflow{to{left:18px}}
+.ad-pyr{display:flex;flex-direction:column}
+.ad-pyr svg{width:100%;height:205px}
+.ad-pyr polygon{fill:#24262b;stroke:#3a3c43;stroke-width:1.5;transition:fill .5s,stroke .5s,filter .5s}
+.ad-pyr polygon.on{fill:var(--pc);stroke:#fff;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--pc) 60%,transparent))}
+.ad-pyr text{font-family:Montserrat,sans-serif;font-weight:800;fill:#d8d9dc;transition:fill .5s}
+.ad-pyr text.on{fill:#111}
+.ad-pyr .tt{margin-top:6px;font-size:12.5px;line-height:1.45;color:#cfd0d4}
+.ad-pyr .tt b{color:var(--pc)}
+.ad-cyc{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 170px;align-items:stretch;margin-top:16px}
+.ad-cyc .card{padding:13px 16px}
+.ad-cyc h4{font-size:19px;font-weight:800;color:var(--pc);display:flex;align-items:center;gap:8px;transition:color .4s}
+.ad-cyc h4 small{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700;text-transform:uppercase;margin-left:auto}
+.ad-cyc p{font-size:14px;color:#d8d9dc;line-height:1.42;margin-top:5px}
+.ad-cyc .ar{display:grid;place-items:center;color:var(--pc);font-size:22px;font-weight:800}
+.ad-cyc .rep{margin-left:14px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:12px;color:var(--muted);line-height:1.4;padding:10px}
+.ad-cyc .rep b{font-size:30px;color:var(--pc);display:inline-block;animation:spin 6s linear infinite}
+.ad-lead{position:relative;height:58px;margin-top:16px}
+.ad-lead .ln{position:absolute;left:0;right:0;top:20px;height:2px;background:linear-gradient(90deg,var(--p2),var(--p3),var(--p4),var(--p5))}
+.ad-lead .pill{position:absolute;top:6px;font-size:13px;padding:6px 14px}
+.ad-lead .nd{position:absolute;top:11px;transform:translateX(-50%);text-align:center;cursor:pointer}
+.ad-lead .nd i{display:block;margin:0 auto;width:20px;height:20px;border-radius:50%;background:var(--bg);border:3px solid var(--c);transition:all .35s}
+.ad-lead .nd.on i{background:var(--c);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 25%,transparent)}
+.ad-lead .nd small{display:block;font-size:11px;color:var(--dim);margin-top:5px;white-space:nowrap;font-weight:700;transition:color .3s}
+.ad-lead .nd.on small{color:var(--text)}
+
 </style>
 </head>
 <body>
@@ -644,8 +732,8 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
     <h1 class="a" style="--d:.25s;margin-top:22px">From a hand-held register to an <span>intelligent document workspace</span></h1>
     <p class="sub a" style="--d:.45s;font-size:22px">Document Control System: a phased roadmap on SharePoint, Power Apps and Microsoft 365 Copilot. Start small, remove the manual work, then grow capability in-house.</p>
     <div class="title-meta a" style="--d:.65s">
-      <div>Version<b>Roadmap v1.0</b></div>
-      <div>Date<b>16 November 2026</b></div>
+      <div>Version<b>Roadmap v1.1</b></div>
+      <div>Date<b>19 November 2026</b></div>
       <div>Platform<b>Microsoft 365 E5 + Copilot</b></div>
       <div>Classification<b>Private &amp; Confidential</b></div>
     </div>
@@ -706,8 +794,8 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
 <!-- ============ 4 GANTT ============ -->
 <section class="slide" data-brand data-title="Roadmap at a glance">
   <div class="kicker a">Roadmap at a glance · indicative</div>
-  <h2 class="a" style="--d:.1s">Live in about 10 weeks. Each release then gets room to settle before the next phase starts.</h2>
-  <p class="sub a" style="--d:.2s">Discovery takes 2 weeks and Phase 1 takes 6–8 weeks. Every go-live is followed by hypercare and a settling-in period before the next phase starts. Copilot quick wins come after Phase 3 secures access. The full roadmap runs about 13 months, and scope and timing are confirmed at each phase gate.</p>
+  <h2 class="a" style="--d:.1s">Live in about 11 weeks. Each release then gets room to settle before the next phase starts.</h2>
+  <p class="sub a" style="--d:.2s">Discovery takes 2 weeks and Phase 1 takes 8–9 weeks. Every go-live is followed by hypercare and a settling-in period before the next phase starts. Copilot quick wins come after Phase 3 secures access. The full roadmap runs about 13 months, and scope and timing are confirmed at each phase gate.</p>
   <div class="gantt a" style="--d:.25s">
     <div class="qrow"><div style="border:none;background:none"></div><div>Q1 2027</div><div>Q2 2027</div><div>Q3 2027</div><div>Q4 2027</div><div>Q1 2028</div></div>
     <div class="months"><div style="border:none"></div><div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div><div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nov</div><div>Dec</div><div>Jan</div><div>Feb</div><div>Mar</div></div>
@@ -760,7 +848,7 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
 <!-- ============ 6 PHASE 1 OVERVIEW ============ -->
 <section class="slide" data-brand data-title="Phase 1 · Replace">
   <div class="phead">
-    <div><div class="phasebadge a" style="color:var(--p1)"><i style="background:var(--p1)">1</i>Phase 1 · Replace &amp; remove manual work · 6–8 weeks</div>
+    <div><div class="phasebadge a" style="color:var(--p1)"><i style="background:var(--p1)">1</i>Phase 1 · Replace &amp; remove manual work · 8–9 weeks</div>
     <h2 class="a" style="--d:.1s">Same modules people know, with the manual handling taken out.</h2>
     <p class="sub a" style="--d:.18s">A like-for-like replacement, so adoption is easy. The difference is that record, number, folder and file are created as one controlled transaction.</p></div>
   </div>
@@ -950,6 +1038,95 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
   <div class="footer"><span>No separate system to log into: the DCS is a SharePoint site with an app on top</span><span>00</span></div>
 </section>
 
+
+<!-- ============ NEW v1.1: PHASE 1 SCOPE ============ -->
+<section class="slide" data-brand data-title="Phase 1 · Scope">
+  <div class="phead">
+    <div><div class="phasebadge a" style="color:var(--p1)"><i style="background:var(--p1)">1</i>Phase 1 · High-level scope</div>
+    <h2 class="a" style="--d:.1s;font-size:40px">What's in Phase 1, and what's not.</h2></div>
+    <div class="pmeta one a" style="--d:.15s;margin-top:6px"><span class="pill">9 weeks</span><span class="pill">SharePoint Online + Power Automate</span><span class="pill">Single-level approvals</span></div>
+  </div>
+  <div class="scope">
+    <div class="card a l" style="--d:.2s;--accent:var(--p1)">
+      <div class="hd"><span class="tag" style="color:var(--p1)">✓ In scope</span><span class="n">17 items</span></div>
+      <div class="in2">
+        <ul class="clean">
+          <li>Requirement analysis and overall solution design.</li>
+          <li>SharePoint Online-based Document and Correspondence Management System (DCMS).</li>
+          <li>Dashboard with KPI cards, charts, quick actions and recent activities.</li>
+          <li>Project and Job File creation, editing and viewing.</li>
+          <li>Contact management.</li>
+          <li>Correspondence creation, tracking and management.</li>
+          <li>Approval management, including pending approvals, approve/reject actions and approval history.</li>
+          <li>Procurement request management, including LPR, quotations, purchase orders and delivery tracking.</li>
+        </ul>
+        <ul class="clean">
+          <li>Central Document Registry with document listing, search, filtering, details, preview and download.</li>
+          <li>SharePoint lists and data structure configuration.</li>
+          <li>Power Automate workflows and notifications for Job Files, Correspondence, Projects and Procurement Requests.</li>
+          <li>Testing, test cases and technical solution review.</li>
+          <li>UAT environment preparation and support for user validation.</li>
+          <li>Quality assurance and solution stabilization.</li>
+          <li>Production environment configuration and deployment.</li>
+          <li>Production validation and smoke testing.</li>
+          <li>Go-live, handover and 2 weeks of go-live support.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card out a r" style="--d:.3s">
+      <div class="hd"><span class="tag" style="color:#ff7a8a">✕ Out of scope</span><span class="n">7 items</span></div>
+      <ul class="clean">
+        <li>SAP integration. Quotations, Purchase Orders and Delivery Notes generated from SAP will need to be uploaded manually.</li>
+        <li>AI or Microsoft Copilot integration.</li>
+        <li>Complex third-party integrations or additional custom development outside the defined scope.</li>
+        <li>Multi-level or complex approval workflows beyond the agreed single-level approval process.</li>
+        <li>BRD, HLD as the current estimate has zero effort allocated for process documentation.</li>
+        <li>Dedicated Project Management effort, which is currently estimated at zero hours.</li>
+        <li>Any requirements beyond the agreed forms, screens and views will require effort reassessment/change control.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Phase 1 scope as agreed · anything outside it is handled through change control</span><span>00</span></div>
+</section>
+
+<!-- ============ NEW v1.1: PHASE 1 TIMELINE & ASSUMPTIONS ============ -->
+<section class="slide" data-brand data-title="Phase 1 · Timeline & assumptions">
+  <div class="phead">
+    <div><div class="phasebadge a" style="color:var(--p1)"><i style="background:var(--p1)">1</i>Phase 1 · Timeline and key assumptions</div>
+    <h2 class="a" style="--d:.1s;font-size:38px">Nine weeks from discovery to go-live and handover.</h2></div>
+    <div class="pmeta a" style="--d:.15s;margin-top:6px"><span class="pill">W1–W9</span><span class="pill">+ 2 weeks go-live support</span></div>
+  </div>
+  <div class="p1tl">
+    <div class="card a" style="--d:.2s;padding:16px 20px">
+      <div class="wk">
+        <div class="h">#</div><div class="h ph">PHASE</div><div class="h">W1</div><div class="h">W2</div><div class="h">W3</div><div class="h">W4</div><div class="h">W5</div><div class="h">W6</div><div class="h">W7</div><div class="h">W8</div><div class="h">W9</div>
+        <div class="no">1</div><div class="nm">Discovery &amp; Solution Design</div><div class="c on" style="--d:0.3s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">2</div><div class="nm">Dashboard &amp; Core Application Foundation</div><div class="c on" style="--d:0.32s"><i></i></div><div class="c on" style="--d:0.41s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">3</div><div class="nm">Projects, Job Files, Contacts &amp; Correspondence</div><div class="c"></div><div class="c on" style="--d:0.43s"><i></i></div><div class="c on" style="--d:0.52s"><i></i></div><div class="c on" style="--d:0.61s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">4</div><div class="nm">Approvals, Procurement &amp; Document Registry</div><div class="c"></div><div class="c"></div><div class="c on" style="--d:0.54s"><i></i></div><div class="c on" style="--d:0.63s"><i></i></div><div class="c on" style="--d:0.72s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">5</div><div class="nm">Workflow Automation &amp; SharePoint Data Layer</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on" style="--d:0.74s"><i></i></div><div class="c on" style="--d:0.83s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">6</div><div class="nm">Testing &amp; Technical Review</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on" style="--d:0.85s"><i></i></div><div class="c"></div><div class="c"></div><div class="c"></div>
+        <div class="no">7</div><div class="nm">UAT Preparation &amp; Validation Support</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on" style="--d:0.87s"><i></i></div><div class="c on" style="--d:0.96s"><i></i></div><div class="c"></div><div class="c"></div>
+        <div class="no">8</div><div class="nm">Quality Assurance &amp; Stabilization</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on" style="--d:0.98s"><i></i></div><div class="c on" style="--d:1.07s"><i></i></div><div class="c"></div>
+        <div class="no">9</div><div class="nm">Production Deployment, Go-Live &amp; Handover</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c on" style="--d:1.09s"><i></i></div><div class="c on" style="--d:1.18s"><i></i></div>
+      </div>
+    </div>
+    <div class="card a r" style="--d:.3s;--accent:var(--p1)">
+      <div class="tag" style="color:var(--p1)">Key assumptions</div>
+      <ul class="clean" style="margin-top:10px">
+        <li>SharePoint Online will be used as the primary platform for the portal, document management and data storage.</li>
+        <li>Power Automate will be used for workflow automation and notifications.</li>
+        <li>Customer will provide the required fields, templates, existing documents, master data and business process details.</li>
+        <li>Customer will provide document formats and numbering conventions.</li>
+        <li>Customer will provide approver names and relevant details during the development phase.</li>
+        <li>Single-level approval is considered for Job Files, Correspondence, Procurement Requests and Projects.</li>
+        <li>One LPR is assumed for each Procurement Request.</li>
+        <li>Customer will provide the required LPR format/template.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Indicative plan in weeks from project start · 2 weeks of go-live support follow W9</span><span>00</span></div>
+</section>
 
 <!-- ============ 10 ARCHITECTURE ============ -->
 <section class="slide" data-brand data-title="Phase 1 · Architecture & release path">
@@ -1368,6 +1545,75 @@ svg text{font-family:Montserrat,system-ui,sans-serif}
   <div class="footer"><span>The same rhythm repeats after every release: hypercare, settling-in, then the next phase</span><span>17</span></div>
 </section>
 
+<!-- ============ NEW v1.1: ADOPTION APPROACH, PHASES 2-5 (interactive) ============ -->
+<section class="slide ad" data-brand data-title="Phases 2–5 · Adoption approach">
+  <div class="phead">
+    <div><div class="phasebadge a" style="color:var(--pc)"><i id="adBadge" style="background:var(--pc);transition:background .4s">2</i>Beyond Phase 1 · How each phase is delivered and adopted</div>
+    <h2 class="a" style="--d:.1s;font-size:34px;max-width:760px">Every phase after Phase 1 passes the same gate, runs two workstreams and grows people's skills step by step.</h2></div>
+    <div class="ad-sel a r" id="adSel" style="--d:.2s;margin-top:4px">
+      <button data-k="0" style="--c:var(--p2)"><b>PHASE 2</b><span>Automate</span><i></i></button>
+      <button data-k="1" style="--c:var(--p3)"><b>PHASE 3</b><span>Secure &amp; segment</span><i></i></button>
+      <button data-k="2" style="--c:var(--p4)"><b>PHASE 4</b><span>Intelligent</span><i></i></button>
+      <button data-k="3" style="--c:var(--p5)"><b>PHASE 5</b><span>Empower &amp; scale</span><i></i></button>
+      <button class="pp" id="adPlay" title="Play or pause">❚❚</button>
+    </div>
+  </div>
+
+  <div class="ad-grid">
+    <!-- gate -->
+    <div class="card ad-gate a l" style="--d:.25s">
+      <div class="tag" style="color:var(--pc)">Phase gate · essentials before start</div>
+      <div class="g" data-g="0"><div class="ck">✓</div><div><h4>Sponsor</h4><p class="sw" id="adG0"></p></div></div>
+      <div class="g" data-g="1"><div class="ck">✓</div><div><h4>Scenarios</h4><p class="sw" id="adG1"></p></div></div>
+      <div class="g" data-g="2"><div class="ck">✓</div><div><h4>Security</h4><p class="sw" id="adG2"></p></div></div>
+    </div>
+    <!-- workstreams -->
+    <div class="ad-ws a" style="--d:.32s">
+      <div class="card ue"><h4>👥 User enablement <small>Prepare the people</small></h4><ul class="clean sw" id="adUE"></ul><div class="ad-flow" style="top:50%"></div></div>
+      <div class="ad-link"><em>⇅</em><span>The two workstreams run together and support each other</span><em>⇅</em></div>
+      <div class="card tr"><h4>⚙️ Technical readiness <small>Prepare the platform</small></h4><ul class="clean sw" id="adTR"></ul><div class="ad-flow" style="top:50%"></div></div>
+    </div>
+    <!-- skills pyramid -->
+    <div class="card ad-pyr a r" style="--d:.4s">
+      <div class="tag" style="color:var(--pc)">Skills progression · onboard &amp; engage</div>
+      <svg viewBox="0 0 360 255" aria-label="Skills pyramid">
+        <polygon data-t="3" points="180,8 239,92 121,92"/>
+        <polygon data-t="2" points="117,98 243,98 294,170 66,170"/>
+        <polygon data-t="1" points="62,176 298,176 350,250 10,250"/>
+        <text data-t="3" x="180" y="70" text-anchor="middle" font-size="13">3 · Org</text>
+        <text data-t="2" x="180" y="132" text-anchor="middle" font-size="14">2 · Departmental</text>
+        <text data-t="2" x="180" y="151" text-anchor="middle" font-size="11" font-weight="600">role-specific skills</text>
+        <text data-t="1" x="180" y="210" text-anchor="middle" font-size="15">1 · Individual</text>
+        <text data-t="1" x="180" y="230" text-anchor="middle" font-size="11" font-weight="600">foundational skills · start here</text>
+      </svg>
+      <div class="tt sw" id="adTier"></div>
+    </div>
+  </div>
+
+  <!-- explore / expand / extend -->
+  <div class="ad-cyc a" style="--d:.5s">
+    <div class="card"><h4>🔎 Explore <small>find value</small></h4><p class="sw" id="adC0"></p></div>
+    <div class="ar">→</div>
+    <div class="card"><h4>🧩 Expand <small>build it</small></h4><p class="sw" id="adC1"></p></div>
+    <div class="ar">→</div>
+    <div class="card"><h4>📈 Extend <small>scale it</small></h4><p class="sw" id="adC2"></p></div>
+    <div class="rep"><b>↻</b>Repeats every phase, and what we learn feeds the next phase's gate</div>
+  </div>
+
+  <!-- leadership journey -->
+  <div class="ad-lead a" style="--d:.6s" id="adLead">
+    <div class="ln"></div>
+    <span class="pill" style="left:0;border-color:var(--pc)">👔 Leadership journey · VSL ME sponsor + AI council</span>
+    <div class="nd" data-k="0" style="left:34%;--c:var(--p2)"><i></i><small>P2 · sponsor sets approval rules</small></div>
+    <div class="nd" data-k="1" style="left:48.5%;--c:var(--p3)"><i></i><small>P3 · department heads own sites</small></div>
+    <div class="nd" data-k="2" style="left:63%;--c:var(--p4)"><i></i><small>P4 · AI council picks scenarios</small></div>
+    <div class="nd" data-k="3" style="left:77.5%;--c:var(--p5)"><i></i><small>P5 · CoE owns the backlog</small></div>
+    <span class="pill" style="right:0;background:linear-gradient(90deg,var(--p4),var(--p5));color:#111;border:none">🛡 Responsible AI principles</span>
+  </div>
+
+  <div class="footer"><span>Approach adapted from Microsoft's Copilot adoption guidance and tailored to VSL ME · click a phase, or let it play</span><span>00</span></div>
+</section>
+
 <!-- ============ 18 RISKS ============ -->
 <section class="slide" data-brand data-title="Risks & dependencies">
   <div class="kicker a">Risks and dependencies</div>
@@ -1495,17 +1741,78 @@ slides.forEach((s,i)=>{ if(s.querySelector('[data-count]')) hooks[i]={enter:()=>
     },leave(){tm.forEach(clearTimeout);}};
 })();
 
+/* ---------- adoption approach (phases 2-5) ---------- */
+(function(){
+  const i=slides.findIndex(s=>s.dataset.title==='Phases 2–5 · Adoption approach'); if(i<0)return;
+  const S=slides[i], $=id=>document.getElementById(id), DUR=9000;
+  const P=[
+    {c:'var(--p2)',n:'2',tiers:[1],
+     g:['The Phase 1 sponsor confirms the Phase 2 backlog and the approval thresholds.','Approvals by the delegation-of-authority matrix, registering email from Outlook, and management dashboards.','Approvers and thresholds are agreed, and Phase 1 access is reviewed before automating.'],
+     ue:['Approvers trained to approve from Teams and Outlook','Document controllers switch to the Outlook add-in','Champions in document control and procurement gather feedback'],
+     tr:['Approval flows with thresholds, reminders and escalation','Outlook add-in deployed centrally by head office IT','Power BI on the DCS lists, with a premium licence check'],
+     tier:'<b>Individual value.</b> Each user gets quick wins: fewer emails, faster approvals and one place to check status.',
+     cyc:['Use Phase 1 usage data and the cycle-time baseline to find where work still waits.','Automate approvals, reminders, escalations and email registration.','Roll out to every approver and give management live dashboards.']},
+    {c:'var(--p3)',n:'3',tiers:[1,2],
+     g:['Department heads are named as site owners and are accountable for access.','Department sites for engineering, HSE, HR, finance and commercial.','Access matrix, sensitivity labels and an oversharing scan are signed off.'],
+     ue:['Site owners trained on permissions and access reviews','Staff learn where content belongs and why','Sensitivity labels explained in plain language'],
+     tr:['Hub and department sites with Entra security groups','Sensitivity labels and data loss prevention policies','Oversharing reports and quarterly access reviews'],
+     tier:'<b>Departmental value.</b> Teams work in their own sites, with structure and access designed around how each department works.',
+     cyc:['Map each department\'s content, owners and who needs to see what.','Provision the sites, labels, groups and access reviews.','Move department content in waves and make access reviews routine.']},
+    {c:'var(--p4)',n:'4',tiers:[2,3],
+     g:['An AI council, chaired by the executive sponsor, sets priorities with head office.','3–5 high-value Copilot scenarios with a measured pilot group.','Phase 3 access controls are verified before Copilot is switched on.'],
+     ue:['Pilot group: document control, procurement and project managers','Prompt training: summarise, draft, compare and find','Champions maintain a shared VSL ME prompt library'],
+     tr:['Copilot licences assigned group by group','SharePoint and Copilot Studio agents grounded in DCS libraries','Copilot readiness, usage and value reporting'],
+     tier:'<b>Departmental to organisational value.</b> Role-specific prompts first, then agents that work across registers and departments.',
+     cyc:['Choose scenarios such as summarising correspondence, drafting replies and finding method statements.','Build SharePoint agents and Copilot Studio agents over the registers.','Scale from the pilot group to departments, based on measured value.']},
+    {c:'var(--p5)',n:'5',tiers:[3],
+     g:['A Centre of Excellence owned by VSL ME, with BEMEA in support.','A backlog of maker ideas, ranked by the AI council.','Power Platform governance: environments, data loss prevention and maker rules.'],
+     ue:['Citizen makers trained and certified','Advanced skills for high-value user groups','Community of practice, showcases and recognition'],
+     tr:['CoE Starter Kit and environment strategy','Application lifecycle management for maker solutions','Monitoring, cost and licence optimisation'],
+     tier:'<b>Organisational value.</b> VSL ME builds and automates across departments itself, with less reliance on outside help.',
+     cyc:['Collect new ideas from usage data, service reviews and the champions.','Makers build with Power Apps, Power Automate and Copilot Studio.','Scale proven solutions across departments and optimise usage and licences.']},
+  ];
+  let k=0,auto=true,tm=null,sw=null;
+  const btns=[...$('adSel').querySelectorAll('button[data-k]')], nodes=[...$('adLead').querySelectorAll('.nd')];
+  const gates=[...S.querySelectorAll('.ad-gate .g')], swEls=[...S.querySelectorAll('.sw')];
+  function fill(p){
+    p.g.forEach((t,j)=>$('adG'+j).textContent=t);
+    $('adUE').innerHTML=p.ue.map(t=>`<li>${t}</li>`).join('');
+    $('adTR').innerHTML=p.tr.map(t=>`<li>${t}</li>`).join('');
+    $('adTier').innerHTML=p.tier;
+    p.cyc.forEach((t,j)=>$('adC'+j).textContent=t);
+  }
+  function show(n,first){
+    k=n;const p=P[n];
+    S.style.setProperty('--pc',p.c);$('adBadge').textContent=p.n;
+    btns.forEach((b,j)=>{b.classList.toggle('on',j===n);const bar=b.querySelector('i');bar.classList.remove('run');if(j===n&&auto){void bar.offsetWidth;bar.style.setProperty('--dur',DUR+'ms');bar.classList.add('run');}});
+    nodes.forEach((d,j)=>d.classList.toggle('on',j<=n));
+    S.querySelectorAll('.ad-pyr [data-t]').forEach(e=>e.classList.toggle('on',p.tiers.includes(+e.dataset.t)));
+    gates.forEach(g=>g.classList.remove('on'));
+    gates.forEach((g,j)=>setTimeout(()=>{if(k===n)g.classList.add('on');},350+j*220));
+    clearTimeout(sw);
+    if(first){fill(p);return;}
+    swEls.forEach(e=>e.classList.add('out'));
+    sw=setTimeout(()=>{fill(p);swEls.forEach(e=>e.classList.remove('out'));},230);
+  }
+  function loop(){clearTimeout(tm);if(!auto)return;tm=setTimeout(()=>{show((k+1)%P.length);loop();},DUR);}
+  function setAuto(a){auto=a;$('adPlay').textContent=a?'❚❚':'▶';$('adPlay').title=a?'Pause':'Play';show(k);loop();}
+  $('adSel').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='adPlay'){setAuto(!auto);return;}auto=false;$('adPlay').textContent='▶';clearTimeout(tm);show(+b.dataset.k);};
+  $('adLead').onclick=e=>{const d=e.target.closest('.nd');if(!d)return;auto=false;$('adPlay').textContent='▶';clearTimeout(tm);show(+d.dataset.k);};
+  fill(P[0]);
+  hooks[i]={enter(){auto=true;$('adPlay').textContent='❚❚';show(0,true);loop();},leave(){clearTimeout(tm);clearTimeout(sw);}};
+})();
+
 /* ---------- gantt ---------- */
 (function(){
   const rows=[
     {n:'Phase 0 · Mobilise',s:'Discovery · 2 weeks',c:'var(--p0)',bars:[[0,0.5,'2 wks']]},
-    {n:'Phase 1 · Replace',s:'Build · UAT · migrate · 6–8 wks',c:'var(--p1)',bars:[[0.5,1.9,'Replace · 6–8 wks']],mil:[[2.4,'Go-live']]},
-    {n:'Hypercare & settling-in',s:'After every release',c:'var(--cyan)',bars:[[2.4,0.93,'Hypercare','thin'],[3.33,0.67,'Settle','thin ghost'],[6.25,0.75,'','thin ghost'],[9.25,0.75,'','thin ghost'],[13,0.75,'','thin ghost']]},
+    {n:'Phase 1 · Replace',s:'Build · UAT · migrate · 8–9 wks',c:'var(--p1)',bars:[[0.5,2.1,'Replace · 8–9 wks']],mil:[[2.6,'Go-live']]},
+    {n:'Hypercare & settling-in',s:'After every release',c:'var(--cyan)',bars:[[2.6,0.93,'Hypercare','thin'],[3.53,0.47,'Settle','thin ghost'],[6.25,0.75,'','thin ghost'],[9.25,0.75,'','thin ghost'],[13,0.75,'','thin ghost']]},
     {n:'Phase 2 · Automate',s:'Approvals, Outlook add-in, BI',c:'var(--p2)',bars:[[4,2.25,'Approvals · add-in']],mil:[[6.25,'Release 2']]},
     {n:'Phase 3 · Secure & Segment',s:'Department sites & access',c:'var(--p3)',bars:[[7,2.25,'Sites · labels · access']],mil:[[9.25,'Sites live']]},
     {n:'Phase 4 · Intelligent',s:'Copilot & agents',c:'var(--p4)',bars:[[10,3,'Quick wins · agents']],mil:[[10,'Copilot quick wins'],[13,'Agents live']]},
     {n:'Phase 5 · Empower & Scale',s:'CoE · makers · Copilot in SharePoint',c:'var(--p5)',bars:[[9.25,5.75,'CoE · citizen makers · Copilot in SharePoint','ghost']]},
-    {n:'Warranty → BEMEA SLA',s:'90 days, then ongoing',c:'var(--orange)',bars:[[2.4,3,'90-day warranty','thin'],[5.4,9.6,'Ongoing SLA','thin ghost']]},
+    {n:'Warranty → BEMEA SLA',s:'90 days, then ongoing',c:'var(--orange)',bars:[[2.6,3,'90-day warranty','thin'],[5.6,9.4,'Ongoing SLA','thin ghost']]},
   ];
   let h='';
   rows.forEach((r,ri)=>{
